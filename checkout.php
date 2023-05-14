@@ -4,7 +4,7 @@ require "vendor/autoload.php";
 header("Content-Type", "application/json");
 header("Access-Control-Allow-Origin: http://localhost:5500");
 
-$stripe = new Stripe\StripeClient("sk_test_51MdG6EFY7D2eJXuuiyglYBZ1LiqmewSLnXdQ3hnpY2b6VebjA5HMAXqHyAZpXmn20XrmPdGn4unKE3dzqg6WmYUf00FKhX6dB8");
+$stripe = new Stripe\StripeClient("Secret Key Here");
 $session = $stripe->checkout->sessions->create([
     "success_url" => "http://localhost:5500/success.html",
     "cancel_url" => "http://localhost:5500/cancel.html",
